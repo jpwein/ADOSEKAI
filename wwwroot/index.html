@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SekaiADO 24</title>
+  <style>
+    :root { color-scheme: dark; --bg:#10151c; --panel:#18212b; --line:#2b3a48; --accent:#63d6c4; }
+    * { box-sizing: border-box; } body { font-family: Arial, sans-serif; margin:0; background:var(--bg); color:#edf2f7; }
+    main { max-width:1200px; margin:0 auto; padding:28px 18px 60px; } h1 { color:var(--accent); margin:0 0 8px; }
+    .subtitle { color:#b7c4cf; margin:0 0 24px; } .tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+    .tab { border:1px solid var(--line); background:var(--panel); color:#edf2f7; padding:11px 18px; border-radius:6px; cursor:pointer; }
+    .tab.active, .primary { background:var(--accent); color:#10201f; border-color:var(--accent); }
+    .workspace { display:grid; grid-template-columns:minmax(290px, 360px) 1fr; gap:16px; }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:18px; }
+    h2 { margin-top:0; } label { display:block; margin:12px 0 5px; color:#cbd5df; }
+    input, select { width:100%; padding:10px; border:1px solid #455669; border-radius:5px; background:#0f1720; color:#fff; }
+    button { border:1px solid #52677b; background:#263544; color:#fff; padding:9px 13px; border-radius:5px; cursor:pointer; }
+    button:hover { filter:brightness(1.15); } form button { margin-top:16px; width:100%; } .message { min-height:22px; margin-top:10px; color:#9fe8dc; }
+    .error { color:#ff9d9d; } .list { display:grid; gap:10px; } .card { border:1px solid var(--line); padding:12px; border-radius:6px; background:#111a23; }
+    .card strong { color:var(--accent); } .empty, .hint { color:#aebbc6; } @media (max-width:760px) { .workspace { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>SekaiADO 24 — sexai</h1>
+  <p class="subtitle">Управление студентами, группами, преподавателями, предметами и оценками в CollegeDB.</p>
+  <div id="tabs" class="tabs"></div>
+  <div class="workspace">
+    <section class="panel"><h2 id="form-title">Добавить</h2><form id="entity-form"></form><div id="form-message" class="message"></div></section>
+    <section class="panel"><h2 id="list-title">Список</h2><div id="entity-list" class="list"></div></section>
+  </div>
+</main>
+<script src="/js/sexai.js"></script>
+</body>
+</html>
